@@ -2,8 +2,9 @@
 
 #### 1. 我们在数据库操作的时候，比如 dao 层中当遇到一个 sql.ErrNoRows 的时候，是否应该 Wrap 这个 error，抛给上层。为什么，应该怎么做请写出代码？
 
-sql.ErrNoRows 是标准库的函数，dao层需要对其做wrap包装。但不应该包含具体的数据操作的信息（e.g.: sql scripts）. <br>
-大致代码如下：<br>
+sql.ErrNoRows 是标准库的函数，dao层需要对其做wrap包装。但不应该包含具体的数据操作的信息 
+
+大致代码如下：
 
 
 ```
